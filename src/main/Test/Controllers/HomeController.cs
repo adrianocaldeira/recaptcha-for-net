@@ -14,11 +14,13 @@ namespace Test.Controllers
         [HttpPost]
         public ActionResult Index(string name)
         {
-            if (Recaptcha.Verify().Success)
-            {
-                
-            }
+            var recaptchaResponse = Recaptcha.Verify();
 
+            if (!recaptchaResponse.Success)
+            {
+                ModelState.AddModelError("Recaptcha", "Informe que você não é um robô clicando no quadro do reCAPTCHA");
+            }
+            
             return View();
         }
     }

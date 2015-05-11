@@ -12,9 +12,11 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
+@Html.ValidationSummary()
 @using (Html.BeginForm("Index", "Home", FormMethod.Post))
 {
-    <label>Name:</label> <input type="text" name="Nome"/>
+    <label>Name:</label>
+    <input type="text" name="Nome"/>
     <div class="g-recaptcha" data-sitekey="6Ld2iwYTAAAAANLmI5ANU5kB6EKSc3aqA8SUV2CL"></div>
     <input type="submit" value="Submit">
 }
