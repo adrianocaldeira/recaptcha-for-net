@@ -10,7 +10,7 @@ namespace Recaptcha4Net
     [DataContract]
     public class RecaptchaResponse
     {
-        [DataMember(Name = "error-codes")] private List<string> _errorCodes;
+        [DataMember(Name = "error-codes")] private List<string> _errorCodes = null;
         private IDictionary<string, string> _errors;
 
         /// <summary>

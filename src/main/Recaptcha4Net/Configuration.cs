@@ -13,6 +13,7 @@ namespace Recaptcha4Net
 
             Secret = configurationSection.Secret;
             VerifyUrl = configurationSection.VerifyUrl;
+            Site = configurationSection.Site;
 
             if (string.IsNullOrWhiteSpace(VerifyUrl))
             {
@@ -24,6 +25,11 @@ namespace Recaptcha4Net
         ///     Get secret key
         /// </summary>
         public static string Secret { get; private set; }
+
+        /// <summary>
+        ///     Get site key
+        /// </summary>
+        public static string Site { get; private set; }
 
         /// <summary>
         ///     Get verify url

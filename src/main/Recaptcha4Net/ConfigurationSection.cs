@@ -18,6 +18,16 @@ namespace Recaptcha4Net
         }
 
         /// <summary>
+        ///     Get or set site key
+        /// </summary>
+        [ConfigurationProperty("site", IsRequired = true)]
+        public string Site
+        {
+            get { return (string)base["site"]; }
+            set { base["site"] = value; }
+        }
+
+        /// <summary>
         ///     Get or set verify url
         /// </summary>
         [ConfigurationProperty("verifyUrl")]
