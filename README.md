@@ -1,6 +1,6 @@
 ## reCAPTCHA for .Net
 
-Integration library with reCAPTCHA for security check
+Integration library with reCAPTCHA for security check.
 
 ##What is reCAPTCHA?
 
